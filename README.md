@@ -12,9 +12,9 @@ Palette: **burgundy · olive green · cream · gold**.
 ```
 armenian-wedding/
 ├── index.html            ← all page content + Mapbox map container
-├── vercel.json           ← Vercel rewrite: assets/config.js → api/mapbox-config
+├── vercel.json           ← rewrite assets/config.js → api/mapbox-config
 ├── api/
-│   └── mapbox-config.js  ← serves Mapbox token from MAPBOX_TOKEN env (Vercel only)
+│   └── mapbox-config.js  ← injects MAPBOX_TOKEN from Vercel env at runtime
 ├── assets/
 │   ├── styles.css        ← all styling (design tokens at the very top)
 │   ├── script.js         ← language toggle, countdown, journey map, RSVP, menu
@@ -95,20 +95,25 @@ Without a token, the map shows a short fallback message; journey cards still wor
 
 ### Vercel deploy
 
-1. Import the repo in [Vercel](https://vercel.com/new) and connect your GitHub repository.
-2. **Project → Settings → Environment Variables** — add **`MAPBOX_TOKEN`** with your public `pk.…` token. Enable it for **Production** and **Preview** (and Development if you use `vercel dev`).
-3. Deploy. No build step — `assets/config.js` is served at runtime by [`api/mapbox-config.js`](api/mapbox-config.js) via a rewrite in `vercel.json`.
-4. After adding or changing the env var, **Redeploy** from the Vercel dashboard.
+The site is often hosted on **someone else’s Vercel account** (e.g. a friend). They must add the Mapbox token — you cannot do it from your account. Send them **[VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md)** and the `pk.…` token privately (text/email, not GitHub).
 
-Local preview: `./scripts/sync-mapbox-config.sh` reads `.env` → `assets/config.js` (static file for `python3 -m http.server`).
+**Vercel owner steps (summary):**
 
-Restrict your Mapbox token to your Vercel URL(s), e.g. `https://shiona-2027.vercel.app/*`, `https://*.vercel.app/*`, and your custom domain, plus `http://localhost:*` for local dev.
+1. **Settings → Environment Variables** → add **`MAPBOX_TOKEN`** = your public `pk.…` token.
+2. Enable **Production** and **Preview**.
+3. **Redeploy** the latest deployment.
+
+No build step — `assets/config.js` is served at runtime via [`api/mapbox-config.js`](api/mapbox-config.js).
+
+Local preview: `./scripts/sync-mapbox-config.sh` then `python3 -m http.server 5050`.
+
+**Mapbox URL restrictions** (whoever owns the Mapbox account): allow `https://shiona-2027.vercel.app/*`, `https://*.vercel.app/*`, and `http://localhost:*`.
 
 ### Troubleshooting (map blank on Vercel)
 
-1. Open `https://<your-vercel-domain>/assets/config.js` in the browser.
-   - If you see `token: ""` — **`MAPBOX_TOKEN` is missing in Vercel** (not GitHub secrets). Add it under **Project → Settings → Environment Variables** for **Production** and **Preview**, then **Redeploy**.
-   - If you see `token: "pk.…"` but the map is still blank — check Mapbox URL restrictions for your Vercel domain (`auth-failed` fallback).
+1. Open `https://<vercel-domain>/assets/config.js`.
+   - `token: ""` → Vercel owner has not set `MAPBOX_TOKEN` or needs to redeploy. See [VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md).
+   - `token: "pk.…"` but map blank → add Vercel URL to Mapbox token restrictions.
 
 ### Stops (single source of truth)
 
@@ -211,7 +216,7 @@ reorder them freely; the accordion behaviour and styling are automatic.
 python3 -m http.server 5050       # → http://localhost:5050
 ```
 
-**Vercel** (recommended): connect the GitHub repo, set the `MAPBOX_TOKEN` environment variable, and deploy. See §3 “Vercel deploy” for details — token is injected at runtime, not build time.
+**Vercel:** the project owner must set `MAPBOX_TOKEN` in Vercel — see [VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md).
 
 ---
 
