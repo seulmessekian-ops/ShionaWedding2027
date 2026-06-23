@@ -12,10 +12,14 @@ Palette: **burgundy · olive green · cream · gold**.
 ```
 armenian-wedding/
 ├── index.html            ← all page content + Mapbox map container
+├── vercel.json           ← Vercel build (writes config.js from MAPBOX_TOKEN)
 ├── assets/
 │   ├── styles.css        ← all styling (design tokens at the very top)
 │   ├── script.js         ← language toggle, countdown, journey map, RSVP, menu
+│   ├── config.js         ← Mapbox token (gitignored; generated at build)
 │   └── route.geojson     ← baked driving route (Yerevan → Goris → Tatev → Sisian)
+├── scripts/
+│   └── sync-mapbox-config.sh
 └── README.md             ← this file
 ```
 
@@ -87,13 +91,15 @@ domain in the Mapbox dashboard before going live.
 
 Without a token, the map shows a short fallback message; journey cards still work.
 
-### GitHub Pages deploy
+### Vercel deploy
 
-1. In [GitHub repo secrets](https://github.com/seulmessekian-ops/ShionaWedding2027/settings/secrets/actions), add **`MAPBOX_TOKEN`** with your public `pk.…` token.
-2. In repo **Settings → Pages**, set **Source** to **GitHub Actions**.
-3. Push to `main` — the workflow writes `assets/config.js` from the secret and deploys.
+1. Import the repo in [Vercel](https://vercel.com/new) (or connect `ShionaWedding2027` from GitHub).
+2. **Project → Settings → Environment Variables** — add **`MAPBOX_TOKEN`** with your public `pk.…` token (Production, Preview, and Development).
+3. Deploy. Vercel runs `scripts/sync-mapbox-config.sh` at build time to write `assets/config.js` from that variable.
 
-Local sync (optional): `./scripts/sync-mapbox-config.sh` copies `.env` → `assets/config.js`.
+Local sync (optional): `./scripts/sync-mapbox-config.sh` reads `.env` → `assets/config.js`.
+
+Restrict your Mapbox token to your Vercel URL(s), e.g. `https://*.vercel.app/*` and your custom domain, plus `http://localhost:*` for local dev.
 
 ### Stops (single source of truth)
 
@@ -189,16 +195,14 @@ reorder them freely; the accordion behaviour and styling are automatic.
 
 ## 7. Previewing &amp; deploying
 
-Static site — preview with any local server (from inside `armenian-wedding/`):
+**Local preview** (from inside `armenian-wedding/`):
 
 ```bash
-python3 -m http.server 5050   # → http://localhost:5050
-# or:  npx serve .
+./scripts/sync-mapbox-config.sh   # needs .env with MAPBOX_TOKEN
+python3 -m http.server 5050       # → http://localhost:5050
 ```
 
-To deploy, upload the **whole `armenian-wedding/` folder** to any static host
-(Netlify / Vercel drag-and-drop, GitHub Pages, or FTP with `index.html` at the
-site root).
+**Vercel** (recommended): connect the GitHub repo, set the `MAPBOX_TOKEN` environment variable, and deploy. See §3 “Vercel deploy” for details. Any static host works too — upload the folder with `assets/config.js` generated at build time (never commit the token).
 
 ---
 
