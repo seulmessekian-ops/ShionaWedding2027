@@ -102,7 +102,13 @@ Without a token, the map shows a short fallback message; journey cards still wor
 
 Local preview: `./scripts/sync-mapbox-config.sh` reads `.env` → `assets/config.js` (static file for `python3 -m http.server`).
 
-Restrict your Mapbox token to your Vercel URL(s), e.g. `https://*.vercel.app/*` and your custom domain, plus `http://localhost:*` for local dev.
+Restrict your Mapbox token to your Vercel URL(s), e.g. `https://shiona-2027.vercel.app/*`, `https://*.vercel.app/*`, and your custom domain, plus `http://localhost:*` for local dev.
+
+### Troubleshooting (map blank on Vercel)
+
+1. Open `https://<your-vercel-domain>/assets/config.js` in the browser.
+   - If you see `token: ""` — **`MAPBOX_TOKEN` is missing in Vercel** (not GitHub secrets). Add it under **Project → Settings → Environment Variables** for **Production** and **Preview**, then **Redeploy**.
+   - If you see `token: "pk.…"` but the map is still blank — check Mapbox URL restrictions for your Vercel domain (`auth-failed` fallback).
 
 ### Stops (single source of truth)
 
