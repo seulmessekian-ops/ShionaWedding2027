@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "bash scripts/sync-mapbox-config.sh",
   "framework": null,
-  "installCommand": ""
+  "rewrites": [
+    { "source": "/assets/config.js", "destination": "/api/mapbox-config" }
+  ]
 }
