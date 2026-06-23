@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5b1320" />
+  <title>Shant &amp; Siona · 7 July 2027 · Syunik, Armenia</title>
+  <meta name="description" content="Shant &amp; Siona invite you to celebrate their wedding across Armenia — Yerevan, Goris and the gardens of Sisian &amp; Tatev — beginning the 4th of July 2027." />
+
+  <meta property="og:title" content="Shant &amp; Siona — A Wedding in Armenia" />
+  <meta property="og:description" content="Three days of celebration across Armenia · 4–7 July 2027." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%235b1320'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='14' fill='%23c2a14d'%3ES%26amp;S%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='24' fill='%235b1320'/%3E%3Ctext x='90' y='118' text-anchor='middle' font-family='Georgia,serif' font-size='72' fill='%23c2a14d'%3ES%26amp;S%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&family=Noto+Serif+Armenian:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body data-lang="en">
+
+  <!-- ============================================================= -->
+  <!-- SVG ORNAMENT SPRITE                                            -->
+  <!-- ============================================================= -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <!-- Peony spray (corner botanical line-art) -->
+      <symbol id="i-peony" viewBox="0 0 240 240">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+          <!-- stem sweeping toward the inner corner -->
+          <path d="M66 66c36 20 70 48 104 104"/>
+          <path d="M66 66c-6 30 0 56 14 84"/>
+          <path d="M66 66c30-6 56-2 86 10"/>
+          <!-- leaves along the stems -->
+          <g transform="translate(120 116) rotate(38)"><path d="M0 0c14-7 30 2 36 22-16 1-30-6-36-22z"/><path d="M4 4l26 16"/></g>
+          <g transform="translate(150 150) rotate(40) scale(1.15)"><path d="M0 0c14-7 30 2 36 22-16 1-30-6-36-22z"/><path d="M4 4l26 16"/></g>
+          <g transform="translate(92 132) rotate(86)"><path d="M0 0c12-6 26 2 31 19-14 1-26-5-31-19z"/><path d="M3 3l22 14"/></g>
+          <g transform="translate(132 92) rotate(-8)"><path d="M0 0c12-6 26 2 31 19-14 1-26-5-31-19z"/><path d="M3 3l22 14"/></g>
+          <!-- peony bloom at 66,66 -->
+          <g transform="translate(66 66)">
+            <g stroke-width="1.5">
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(52)"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(103)"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(154)"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(206)"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(257)"/>
+              <path d="M0 0c-9-16-8-39 0-51 8 12 9 35 0 51z" transform="rotate(308)"/>
+            </g>
+            <g stroke-width="1.3">
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(26)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(77)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(129)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(180)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(231)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(283)"/>
+              <path d="M0 0c-6-10-5-24 0-32 5 8 6 22 0 32z" transform="rotate(334)"/>
+            </g>
+            <circle r="7"/>
+            <circle r="1.4" cx="0" cy="-3" fill="currentColor" stroke="none"/>
+            <circle r="1.4" cx="3" cy="2" fill="currentColor" stroke="none"/>
+            <circle r="1.4" cx="-3" cy="2" fill="currentColor" stroke="none"/>
+          </g>
+          <!-- small five-petal blossom near the tip -->
+          <g transform="translate(176 128)">
+            <g stroke-width="1.2">
+              <path d="M0 0c-5-7-4-17 0-22 4 5 5 15 0 22z"/>
+              <path d="M0 0c-5-7-4-17 0-22 4 5 5 15 0 22z" transform="rotate(72)"/>
+              <path d="M0 0c-5-7-4-17 0-22 4 5 5 15 0 22z" transform="rotate(144)"/>
+              <path d="M0 0c-5-7-4-17 0-22 4 5 5 15 0 22z" transform="rotate(216)"/>
+              <path d="M0 0c-5-7-4-17 0-22 4 5 5 15 0 22z" transform="rotate(288)"/>
+            </g>
+            <circle r="3"/>
+          </g>
+          <!-- a couple of buds -->
+          <g transform="translate(150 86) rotate(20)"><path d="M0 0c-5 2-7 9-4 16 7 1 12-3 12-10-1-5-4-7-8-6z"/><path d="M0 16c2 8 0 14 0 18"/></g>
+        </g>
+      </symbol>
+
+      <!-- Lace / filigree oval medallion -->
+      <symbol id="i-lace" viewBox="0 0 300 380">
+        <g fill="none" stroke="currentColor">
+          <ellipse cx="150" cy="190" rx="128" ry="168" stroke-width="1"/>
+          <ellipse cx="150" cy="190" rx="120" ry="160" stroke-width="2.4" stroke-dasharray="1.5 7" stroke-linecap="round"/>
+          <ellipse cx="150" cy="190" rx="110" ry="150" stroke-width="0.8"/>
+          <ellipse cx="150" cy="190" rx="98" ry="138" stroke-width="1.4" stroke-dasharray="0.8 6" stroke-linecap="round"/>
+          <!-- top filigree -->
+          <path d="M150 22c-10 10-10 20 0 28 10-8 10-18 0-28z" stroke-width="1.2"/>
+          <path d="M118 34c14 6 24 16 32 30 8-14 18-24 32-30" stroke-width="1.1"/>
+          <!-- bottom filigree -->
+          <path d="M150 358c-10-10-10-20 0-28 10 8 10 18 0 28z" stroke-width="1.2"/>
+          <path d="M118 346c14-6 24-16 32-30 8 14 18 24 32 30" stroke-width="1.1"/>
+          <!-- side dots -->
+          <circle cx="22" cy="190" r="2.2" fill="currentColor" stroke="none"/>
+          <circle cx="278" cy="190" r="2.2" fill="currentColor" stroke="none"/>
+        </g>
+      </symbol>
+
+      <!-- Pomegranate -->
+      <symbol id="i-pom" viewBox="0 0 64 64">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M32 17c14 0 22 8 22 18 0 13-10 21-22 21S10 48 10 35c0-10 8-18 22-18z"/>
+          <path d="M25 17l-3-9 5 5 5-7 5 7 5-5-3 9"/>
+          <circle cx="32" cy="40" r="2.4" fill="currentColor" stroke="none"/>
+          <circle cx="24" cy="36" r="2.1" fill="currentColor" stroke="none"/>
+          <circle cx="40" cy="36" r="2.1" fill="currentColor" stroke="none"/>
+          <circle cx="28" cy="46" r="2.1" fill="currentColor" stroke="none"/>
+          <circle cx="36" cy="46" r="2.1" fill="currentColor" stroke="none"/>
+        </g>
+      </symbol>
+
+      <!-- Armenian cross / khachkar -->
+      <symbol id="i-cross" viewBox="0 0 64 96">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 6v84M10 34h44"/>
+          <path d="M32 6c3 3 3 6 0 9-3-3-3-6 0-9zM32 90c3-3 3-6 0-9-3 3-3 6 0 9z"/>
+          <path d="M10 34c-3 3-6 3-9 0 3-3 6-3 9 0zM54 34c3 3 6 3 9 0-3-3-6-3-9 0z"/>
+          <circle cx="32" cy="34" r="7"/>
+          <path d="M32 64c8 0 13 5 13 12-4-3-9-3-13 0-4-3-9-3-13 0 0-7 5-12 13-12z"/>
+        </g>
+      </symbol>
+
+      <!-- Eternity / Arevakhach -->
+      <symbol id="i-eternity" viewBox="0 0 64 64">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="32" cy="32" r="6"/>
+          <path d="M32 26c0-9 4-15 12-15-5 3-7 7-6 13"/>
+          <path d="M38 32c9 0 15 4 15 12-3-5-7-7-13-6"/>
+          <path d="M32 38c0 9-4 15-12 15 5-3 7-7 6-13"/>
+          <path d="M26 32c-9 0-15-4-15-12 3 5 7 7 13 6"/>
+        </g>
+      </symbol>
+
+      <!-- small leaf sprig -->
+      <symbol id="i-sprig" viewBox="0 0 120 28">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M10 14h100"/>
+          <path d="M44 14c8-7 18-7 24 0-6 7-16 7-24 0zM60 14c8-7 18-7 24 0-6 7-16 7-24 0z" transform="translate(-2 0)"/>
+        </g>
+      </symbol>
+
+      <!-- icons -->
+      <symbol id="i-water" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 5 7 8.5 7 12a7 7 0 0 1-14 0c0-3.5 3-7 7-12z"/><path d="M9 14a3 3 0 0 0 3 3"/></g></symbol>
+      <symbol id="i-ritual" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 9l7-3 7 3M5 9v7c0 2 3 3 7 3s7-1 7-3V9"/></g></symbol>
+      <symbol id="i-rings" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="14" r="5"/><path d="M9 4l3 3 3-3M12 7V3" stroke-linecap="round" stroke-linejoin="round"/></g></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13l20-7-7 20-3-8-10-5z"/></g></symbol>
+      <symbol id="i-road" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l3 18H5zM12 3v3M12 10v3M12 17v2"/></g></symbol>
+      <symbol id="i-hotel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6M3 21h18"/></g></symbol>
+      <symbol id="i-cable" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5l18-2M12 4v3M6 10h12v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM6 13h12"/></g></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16v10H4zM4 7h16v3H4zM12 7v13M12 7S10 3 7.5 4 9 7 12 7zM12 7s2-4 4.5-3-.5 3-4.5 3z"/></g></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></g></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></g></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></g></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main" data-en="Skip to content" data-hy="Անցնել բովանդակությանը">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- =============================== NAV =============================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a class="monogram" href="#top" aria-label="Shant and Siona — home">
+        <span class="monogram-mark">S<span class="amp">&amp;</span>S</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#story"     data-en="Our Story"  data-hy="Մեր պատմությունը">Our Story</a>
+        <a href="#events"    data-en="Celebration" data-hy="Տոնակատարություն">Celebration</a>
+        <a href="#journey"   data-en="The Journey" data-hy="Ճանապարհը">The Journey</a>
+        <a href="#travel"    data-en="Travel"      data-hy="Ճանապարհորդություն">Travel</a>
+        <a href="#faq"       data-en="FAQ"         data-hy="Հարցեր">FAQ</a>
+        <a class="nav-cta" href="#rsvp" data-en="RSVP" data-hy="Հաստատել">RSVP</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><span id="langLabel">ՀԱՅ</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- =============================== HERO =============================== -->
+    <section class="hero" aria-labelledby="hero-names">
+      <div class="floral-frame" aria-hidden="true">
+        <span class="floral floral--tl"><svg><use href="#i-peony"/></svg></span>
+        <span class="floral floral--tr"><svg><use href="#i-peony"/></svg></span>
+        <span class="floral floral--bl"><svg><use href="#i-peony"/></svg></span>
+        <span class="floral floral--br"><svg><use href="#i-peony"/></svg></span>
+      </div>
+
+      <div class="hero-inner reveal" data-reveal>
+        <p class="hero-eyebrow" data-en="Together with their families" data-hy="Իրենց ընտանիքների հետ միասին">Together with their families</p>
+        <p class="hero-invite" data-en="request the pleasure of your company at the celebration of their marriage" data-hy="հրավիրում են ձեզ իրենց ամուսնության տոնակատարությանը">request the pleasure of your company at the celebration of their marriage</p>
+
+        <h1 class="hero-names" id="hero-names">
+          <span class="n">Shant</span>
+          <span class="amp-script">&amp;</span>
+          <span class="n">Siona</span>
+        </h1>
+        <p class="hero-fullnames" data-en="Shant Krikor Anmahouni Eulmessekian &amp; Siona Jessica Amrgousian" data-hy="Շանթ Գրիգոր Անմահունի Էուլմեսսեքյան և Սիոնա Ջեսիկա Ամրգուսյան">Shant Krikor Anmahouni Eulmessekian &amp; Siona Jessica Amrgousian</p>
+
+        <div class="hero-divider" aria-hidden="true"><svg class="sprig"><use href="#i-sprig"/></svg><span class="hero-dot"><svg><use href="#i-eternity"/></svg></span><svg class="sprig flip"><use href="#i-sprig"/></svg></div>
+
+        <p class="hero-date"><span class="hd-num">07</span><span class="hd-sep">·</span><span class="hd-num">07</span><span class="hd-sep">·</span><span class="hd-num">2027</span></p>
+        <p class="hero-place"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-en="Syunik · Armenia" data-hy="Սյունիք · Հայաստան">Syunik · Armenia</span></p>
+
+        <div class="countdown" id="countdown" role="timer" aria-label="Time until the wedding">
+          <div class="cd-unit"><span class="cd-num" data-cd="days">00</span><span class="cd-lab" data-en="Days" data-hy="Օր">Days</span></div>
+          <div class="cd-unit"><span class="cd-num" data-cd="hours">00</span><span class="cd-lab" data-en="Hours" data-hy="Ժամ">Hours</span></div>
+          <div class="cd-unit"><span class="cd-num" data-cd="mins">00</span><span class="cd-lab" data-en="Minutes" data-hy="Րոպե">Minutes</span></div>
+          <div class="cd-unit"><span class="cd-num" data-cd="secs">00</span><span class="cd-lab" data-en="Seconds" data-hy="Վայրկյան">Seconds</span></div>
+        </div>
+
+        <a class="btn btn--solid hero-rsvp" href="#rsvp" data-en="Reply to our invitation" data-hy="Պատասխանել հրավերին">Reply to our invitation</a>
+      </div>
+
+      <a class="scroll-cue" href="#story" aria-label="Scroll to read more">
+        <span data-en="Scroll" data-hy="Ոլորել">Scroll</span><span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- =============================== STORY =============================== -->
+    <section class="welcome section" id="story" aria-labelledby="story-h">
+      <div class="container">
+        <div class="medallion reveal" data-reveal>
+          <svg class="lace" aria-hidden="true"><use href="#i-lace"/></svg>
+          <div class="medallion-text">
+            <p class="kicker" data-en="Our Story" data-hy="Մեր պատմությունը">Our Story</p>
+            <h2 class="script-h" id="story-h" data-en="Dear friends &amp; family" data-hy="Սիրելի ընկերներ և ընտանիք">Dear friends &amp; family</h2>
+            <p data-en="What began in the heart of the Armenian community grew into a love we now long to celebrate with you. We invite you not to a single day, but to three — across the mountains and monasteries of our homeland — so that the people we love most can share in our joy."
+               data-hy="Այն, ինչ սկսվեց հայ համայնքի սրտում, վերածվեց սիրո, որը այժմ ցանկանում ենք տոնել ձեզ հետ։ Մենք ձեզ հրավիրում ենք ոչ թե մեկ օրվա, այլ երեքի՝ մեր հայրենիքի լեռների և վանքերի միջով, որպեսզի մեր ամենասիրելի մարդիկ կիսեն մեր ուրախությունը։">
+              What began in the heart of the Armenian community grew into a love we now long to celebrate with you. We invite you not to a single day, but to three — across the mountains and monasteries of our homeland — so that the people we love most can share in our joy.
+            </p>
+            <p class="signoff" data-en="With love, Shant &amp; Siona" data-hy="Սիրով՝ Շանթ և Սիոնա">With love, Shant &amp; Siona</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== EVENTS =============================== -->
+    <section class="events section section--olive" id="events" aria-labelledby="events-h">
+      <div class="floral-frame floral-frame--soft" aria-hidden="true">
+        <span class="floral floral--tl"><svg><use href="#i-peony"/></svg></span>
+        <span class="floral floral--br"><svg><use href="#i-peony"/></svg></span>
+      </div>
+      <div class="container">
+        <header class="section-head center on-dark">
+          <p class="kicker" data-en="Three Days of Celebration" data-hy="Երեք օր տոնակատարություն">Three Days of Celebration</p>
+          <h2 class="section-title" id="events-h" data-en="The Programme" data-hy="Ծրագիր">The Programme</h2>
+          <p class="section-sub" data-en="4 – 7 July 2027 · across Armenia" data-hy="4 – 7 հուլիսի 2027 · ողջ Հայաստանում">4 – 7 July 2027 · across Armenia</p>
+        </header>
+
+        <div class="event-cards">
+          <article class="event-card reveal" data-reveal>
+            <span class="event-ic"><svg aria-hidden="true"><use href="#i-water"/></svg></span>
+            <p class="event-date" data-en="Sunday · 4 July" data-hy="Կիրակի · 4 հուլիսի">Sunday · 4 July</p>
+            <h3 class="event-title" data-en="Welcome Party &amp; Vardavar" data-hy="Ողջույնի երեկո և Վարդավառ">Welcome Party &amp; Vardavar</h3>
+            <p class="event-place"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-en="Megerian Carpet · Yerevan" data-hy="Մեղերյան Գորգ · Երևան">Megerian Carpet · Yerevan</span></p>
+            <p class="event-desc" data-en="We gather to welcome you to Armenia — and to celebrate Vardavar, the joyful festival of water. Come ready to laugh (and perhaps to get a little wet)."
+               data-hy="Հավաքվում ենք՝ ձեզ դիմավորելու Հայաստանում և տոնելու Վարդավառը՝ ջրի ուրախ տոնը։ Եկեք պատրաստ ծիծաղելու (և գուցե մի փոքր թրջվելու)։">
+              We gather to welcome you to Armenia — and to celebrate Vardavar, the joyful festival of water. Come ready to laugh (and perhaps to get a little wet).
+            </p>
+          </article>
+
+          <article class="event-card reveal" data-reveal>
+            <span class="event-ic"><svg aria-hidden="true"><use href="#i-ritual"/></svg></span>
+            <p class="event-date" data-en="Tuesday · 6 July" data-hy="Երեքշաբթի · 6 հուլիսի">Tuesday · 6 July</p>
+            <h3 class="event-title" data-en="The Ritual Celebration" data-hy="Ծիսական տոնակատարություն">The Ritual Celebration</h3>
+            <p class="event-place"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-en="A street in Goris" data-hy="Փողոց Գորիսում">A street in Goris</span></p>
+            <p class="event-desc" data-en="In the old town of Goris we close off a street and fill it with music, food and tradition — an evening of Armenian ritual under the open sky."
+               data-hy="Գորիսի հին քաղաքում մենք փակում ենք մի փողոց և լցնում այն երաժշտությամբ, ուտեստով ու ավանդույթով՝ հայկական ծեսի երեկո բաց երկնքի տակ։">
+              In the old town of Goris we close off a street and fill it with music, food and tradition — an evening of Armenian ritual under the open sky.
+            </p>
+          </article>
+
+          <article class="event-card reveal" data-reveal>
+            <span class="event-ic"><svg aria-hidden="true"><use href="#i-rings"/></svg></span>
+            <p class="event-date" data-en="Wednesday · 7 July" data-hy="Չորեքշաբթի · 7 հուլիսի">Wednesday · 7 July</p>
+            <h3 class="event-title" data-en="The Wedding Day" data-hy="Հարսանիքի օրը">The Wedding Day</h3>
+            <p class="event-place"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span data-en="Tatev Monastery &amp; MJA Resort, Sisian" data-hy="Տաթևի վանք և MJA հանգստավայր, Սիսիան">Tatev Monastery &amp; MJA Resort, Sisian</span></p>
+            <p class="event-desc" data-en="Our crowning ceremony takes place in the ancient monastery of Tatev, followed by a reception in the mountain gardens of MJA Resort near Sisian."
+               data-hy="Մեր պսակադրության արարողությունը տեղի կունենա Տաթևի հնագույն վանքում, որին կհաջորդի ընդունելությունը Սիսիանի մոտ գտնվող MJA հանգստավայրի լեռնային այգիներում։">
+              Our crowning ceremony takes place in the ancient monastery of Tatev, followed by a reception in the mountain gardens of MJA Resort near Sisian.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== JOURNEY MAP =============================== -->
+    <section class="journey section" id="journey" aria-labelledby="journey-h">
+      <div class="container journey-intro center">
+        <p class="kicker" data-en="Where We'll Be" data-hy="Որտեղ կլինենք">Where We'll Be</p>
+        <h2 class="section-title" id="journey-h" data-en="Our Journey Across Armenia" data-hy="Մեր ճանապարհը Հայաստանով">Our Journey Across Armenia</h2>
+        <p class="section-sub" data-en="Scroll to follow our route across Armenia" data-hy="Ոլորեք՝ հետևելու մեր երթուղուն Հայաստանով">Scroll to follow our route across Armenia</p>
+      </div>
+
+      <div class="journey-scroll" id="journeyScroll">
+        <div class="journey-stage" id="journeyStage">
+          <div class="map-wrap">
+            <div id="armeniaMap" class="armenia-map" role="img"
+              aria-label="Map of Armenia showing the wedding route from Yerevan to Syunik"></div>
+            <p id="mapFallback" class="map-fallback" hidden
+              data-en="The map could not load. Preview locally with: python3 -m http.server 5050 — then open http://localhost:5050 (do not open the HTML file directly)."
+              data-hy="Քարտեզը բեռնվել չէ։ Տեղային նախադիտման համար՝ python3 -m http.server 5050, ապա բացեք http://localhost:5050 (HTML ֆայլը ուղղակի մի բացեք)։">
+              The map could not load. Preview locally with: python3 -m http.server 5050 — then open http://localhost:5050 (do not open the HTML file directly).
+            </p>
+            <p id="mapAriaLive" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+
+            <div class="map-overlay">
+              <ol class="journey-steps" id="journeySteps">
+                <li class="js-step is-active" data-stop="0" role="button" tabindex="0" aria-label="Stop 1: Yerevan"></li>
+                <li class="js-step" data-stop="1" role="button" tabindex="0" aria-label="Stop 2: Goris"></li>
+                <li class="js-step" data-stop="2" role="button" tabindex="0" aria-label="Stop 3: Tatev"></li>
+                <li class="js-step" data-stop="3" role="button" tabindex="0" aria-label="Stop 4: Sisian"></li>
+              </ol>
+              <div class="journey-cards" id="journeyCards">
+                <article class="j-card is-active" data-stop="0">
+                  <span class="j-num">01</span>
+                  <p class="j-date" data-en="4 July · Welcome" data-hy="4 հուլիսի · Ողջույն">4 July · Welcome</p>
+                  <h3 class="j-title" data-en="Megerian Carpet" data-hy="Մեղերյան Գորգ">Megerian Carpet</h3>
+                  <p class="j-place" data-en="Yerevan" data-hy="Երևան">Yerevan</p>
+                  <p class="j-desc" data-en="Our welcome party and Vardavar celebration in the capital, among the looms of one of Armenia's great carpet houses."
+                     data-hy="Մեր ողջույնի երեկոն և Վարդավառի տոնը մայրաքաղաքում՝ Հայաստանի մեծ գորգագործական տներից մեկի ջուլհակների մեջ։">
+                    Our welcome party and Vardavar celebration in the capital, among the looms of one of Armenia's great carpet houses.
+                  </p>
+                </article>
+                <article class="j-card" data-stop="1">
+                  <span class="j-num">02</span>
+                  <p class="j-date" data-en="6 July · Ritual" data-hy="6 հուլիսի · Ծես">6 July · Ritual</p>
+                  <h3 class="j-title" data-en="Goris" data-hy="Գորիս">Goris</h3>
+                  <p class="j-place" data-en="Syunik Province" data-hy="Սյունիքի մարզ">Syunik Province</p>
+                  <p class="j-desc" data-en="A whole street given over to celebration — our traditional ritual evening in the storied old town of Goris."
+                     data-hy="Մի ամբողջ փողոց՝ նվիրված տոնակատարությանը. մեր ավանդական ծիսական երեկոն Գորիսի պատմական հին քաղաքում։">
+                    A whole street given over to celebration — our traditional ritual evening in the storied old town of Goris.
+                  </p>
+                </article>
+                <article class="j-card" data-stop="2">
+                  <span class="j-num">03</span>
+                  <p class="j-date" data-en="7 July · Ceremony" data-hy="7 հուլիսի · Արարողություն">7 July · Ceremony</p>
+                  <h3 class="j-title" data-en="Tatev Monastery" data-hy="Տաթևի վանք">Tatev Monastery</h3>
+                  <p class="j-place" data-en="Syunik Province" data-hy="Սյունիքի մարզ">Syunik Province</p>
+                  <p class="j-desc" data-en="We exchange our vows in the 9th-century monastery of Tatev, perched on the edge of the Vorotan gorge."
+                     data-hy="Մենք տալիս ենք մեր երդումը 9-րդ դարի Տաթևի վանքում՝ Որոտանի կիրճի եզրին։">
+                    We exchange our vows in the 9th-century monastery of Tatev, perched on the edge of the Vorotan gorge.
+                  </p>
+                </article>
+                <article class="j-card" data-stop="3">
+                  <span class="j-num">04</span>
+                  <p class="j-date" data-en="7 July · Reception" data-hy="7 հուլիսի · Ընդունելություն">7 July · Reception</p>
+                  <h3 class="j-title" data-en="MJA Resort" data-hy="MJA հանգստավայր">MJA Resort</h3>
+                  <p class="j-place" data-en="near Sisian" data-hy="Սիսիանի մոտ">near Sisian</p>
+                  <p class="j-desc" data-en="The celebration continues into the night at MJA Resort, in the cool mountain air near Sisian."
+                     data-hy="Տոնակատարությունը շարունակվում է մինչև գիշեր MJA հանգստավայրում՝ Սիսիանի մոտ զով լեռնային օդում։">
+                    The celebration continues into the night at MJA Resort, in the cool mountain air near Sisian.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== TRAVEL =============================== -->
+    <section class="travel section" id="travel" aria-labelledby="travel-h">
+      <div class="container">
+        <header class="section-head center">
+          <p class="kicker" data-en="For Travelling Guests" data-hy="Ճամփորդող հյուրերի համար">For Travelling Guests</p>
+          <h2 class="section-title" id="travel-h" data-en="Getting Around Armenia" data-hy="Տեղաշարժը Հայաստանում">Getting Around Armenia</h2>
+        </header>
+        <div class="cards">
+          <article class="card reveal" data-reveal>
+            <span class="card-ic"><svg aria-hidden="true"><use href="#i-plane"/></svg></span>
+            <h3 data-en="Arriving" data-hy="Ժամանում">Arriving</h3>
+            <p data-en="Fly into Zvartnots International Airport (EVN) in Yerevan. Many nationalities enter Armenia visa-free for up to 180 days."
+               data-hy="Թռեք Երևանի Զվարթնոց միջազգային օդանավակայան (EVN)։ Շատ երկրների քաղաքացիներ մտնում են առանց վիզայի՝ մինչև 180 օր։">
+              Fly into Zvartnots International Airport (EVN) in Yerevan. Many nationalities enter Armenia visa-free for up to 180 days.
+            </p>
+          </article>
+          <article class="card reveal" data-reveal>
+            <span class="card-ic"><svg aria-hidden="true"><use href="#i-road"/></svg></span>
+            <h3 data-en="Heading south" data-hy="Դեպի հարավ">Heading south</h3>
+            <p data-en="Goris and Sisian are about a 3.5–4 hour drive south of Yerevan through Syunik. We will arrange shuttles between the wedding events."
+               data-hy="Գորիսն ու Սիսիանը Երևանից մոտ 3,5–4 ժամ հարավ են՝ Սյունիքով։ Մենք կկազմակերպենք փոխադրում միջոցառումների միջև։">
+              Goris and Sisian are about a 3.5–4 hour drive south of Yerevan through Syunik. We will arrange shuttles between the wedding events.
+            </p>
+          </article>
+          <article class="card reveal" data-reveal>
+            <span class="card-ic"><svg aria-hidden="true"><use href="#i-cable"/></svg></span>
+            <h3 data-en="Reaching Tatev" data-hy="Տաթև հասնելը">Reaching Tatev</h3>
+            <p data-en="Tatev Monastery is reached by the Wings of Tatev — the world's longest reversible cableway — soaring above the Vorotan gorge."
+               data-hy="Տաթևի վանք հասնում են «Տաթևի թևերով»՝ աշխարհի ամենաերկար ճոպանուղով՝ Որոտանի կիրճի վրայով։">
+              Tatev Monastery is reached by the Wings of Tatev — the world's longest reversible cableway — soaring above the Vorotan gorge.
+            </p>
+          </article>
+          <article class="card reveal" data-reveal>
+            <span class="card-ic"><svg aria-hidden="true"><use href="#i-hotel"/></svg></span>
+            <h3 data-en="Where to stay" data-hy="Որտեղ մնալ">Where to stay</h3>
+            <p data-en="Stay in central Yerevan for the 4th, then in Goris or near Sisian for the 6th and 7th. A recommended list of hotels will follow."
+               data-hy="Մնացեք Երևանի կենտրոնում 4-ին, ապա Գորիսում կամ Սիսիանի մոտ՝ 6-ին և 7-ին։ Առաջարկվող հյուրանոցների ցանկը կհետևի։">
+              Stay in central Yerevan for the 4th, then in Goris or near Sisian for the 6th and 7th. A recommended list of hotels will follow.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== FAQ =============================== -->
+    <section class="faq section section--olive" id="faq" aria-labelledby="faq-h">
+      <div class="floral-frame floral-frame--soft" aria-hidden="true">
+        <span class="floral floral--tr"><svg><use href="#i-peony"/></svg></span>
+        <span class="floral floral--bl"><svg><use href="#i-peony"/></svg></span>
+      </div>
+      <div class="container narrow">
+        <header class="section-head center on-dark">
+          <p class="kicker" data-en="Good to Know" data-hy="Օգտակար տեղեկություն">Good to Know</p>
+          <h2 class="section-title" id="faq-h" data-en="Questions &amp; Answers" data-hy="Հարցեր և պատասխաններ">Questions &amp; Answers</h2>
+        </header>
+
+        <div class="faq-list">
+          <details class="faq-item reveal" data-reveal>
+            <summary><span data-en="Where do the celebrations take place?" data-hy="Որտեղ են անցկացվում տոնակատարությունները">Where do the celebrations take place?</span><svg class="faq-ic" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a"><p data-en="Across three locations: the welcome party in Yerevan (4 July), the ritual celebration in Goris (6 July), and the wedding in the Sisian &amp; Tatev area of Syunik (7 July). Follow the journey map above for the full route."
+              data-hy="Երեք վայրում՝ ողջույնի երեկոն Երևանում (4 հուլիսի), ծիսական տոնը Գորիսում (6 հուլիսի) և հարսանիքը Սյունիքի Սիսիան-Տաթև տարածքում (7 հուլիսի)։ Ամբողջ երթուղին տեսեք վերևի քարտեզում։">Across three locations: the welcome party in Yerevan (4 July), the ritual celebration in Goris (6 July), and the wedding in the Sisian &amp; Tatev area of Syunik (7 July). Follow the journey map above for the full route.</p></div>
+          </details>
+
+          <details class="faq-item reveal" data-reveal>
+            <summary><span data-en="How do I travel between the cities?" data-hy="Ինչպե՞ս տեղափոխվել քաղաքների միջև">How do I travel between the cities?</span><svg class="faq-ic" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a"><p data-en="Syunik is roughly a 3.5–4 hour drive south of Yerevan. We will organise shuttle transport between the events; details will follow with your invitation."
+              data-hy="Սյունիքը Երևանից մոտ 3,5–4 ժամ հարավ է։ Մենք կկազմակերպենք փոխադրում միջոցառումների միջև. մանրամասները կուղարկվեն հրավերի հետ։">Syunik is roughly a 3.5–4 hour drive south of Yerevan. We will organise shuttle transport between the events; details will follow with your invitation.</p></div>
+          </details>
+
+          <details class="faq-item reveal" data-reveal>
+            <summary><span data-en="What is Vardavar — and will I get wet?" data-hy="Ի՞նչ է Վարդավառը, և կթրջվե՞մ">What is Vardavar — and will I get wet?</span><svg class="faq-ic" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a"><p data-en="Vardavar is a beloved Armenian summer festival where people joyfully douse one another with water. Our welcome party embraces it — so wear something easy-going and be ready for a friendly splash!"
+              data-hy="Վարդավառը սիրված հայկական ամառային տոն է, երբ մարդիկ ուրախությամբ ջուր են լցնում միմյանց վրա։ Մեր ողջույնի երեկոն ընդունում է այն. հագեք հարմարավետ հագուստ և պատրաստ եղեք ընկերական ջրցանի։">Vardavar is a beloved Armenian summer festival where people joyfully douse one another with water. Our welcome party embraces it — so wear something easy-going and be ready for a friendly splash!</p></div>
+          </details>
+
+          <details class="faq-item reveal" data-reveal>
+            <summary><span data-en="What should I wear?" data-hy="Ի՞նչ հագնել">What should I wear?</span><svg class="faq-ic" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a"><p data-en="Garden formal in our colours of burgundy, olive and cream. As Tatev and Goris involve ancient stone and open ground, we suggest comfortable shoes for the wedding day."
+              data-hy="Այգային ֆորմալ՝ մեր բուրգունդի, ձիթապտղի և կրեմ գույներով։ Քանի որ Տաթևն ու Գորիսը ներառում են հին քար և բաց տարածք, խորհուրդ ենք տալիս հարմարավետ կոշիկներ հարսանիքի օրվա համար։">Garden formal in our colours of burgundy, olive and cream. As Tatev and Goris involve ancient stone and open ground, we suggest comfortable shoes for the wedding day.</p></div>
+          </details>
+
+          <details class="faq-item reveal" data-reveal>
+            <summary><span data-en="A note on gifts" data-hy="Նվերների մասին">A note on gifts</span><svg class="faq-ic" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-a"><p data-en="Your presence — travelling all this way to be with us in Armenia — is truly the greatest gift. Should you wish to give something more, a note will follow closer to the day."
+              data-hy="Ձեր ներկայությունը՝ այսքան ճանապարհ անցնելը մեզ հետ Հայաստանում լինելու համար, իսկապես ամենամեծ նվերն է։ Եթե ցանկանաք ավելին տալ, հաղորդագրությունը կհետևի օրվան ավելի մոտ։">Your presence — travelling all this way to be with us in Armenia — is truly the greatest gift. Should you wish to give something more, a note will follow closer to the day.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================== RSVP =============================== -->
+    <section class="rsvp section section--wine" id="rsvp" aria-labelledby="rsvp-h">
+      <div class="container narrow">
+        <header class="section-head center on-dark">
+          <svg class="section-ornament reveal" data-reveal aria-hidden="true"><use href="#i-eternity"/></svg>
+          <p class="kicker" data-en="Kindly Reply" data-hy="Խնդրում ենք պատասխանել">Kindly Reply</p>
+          <h2 class="section-title" id="rsvp-h" data-en="Will you join us in Armenia?" data-hy="Կմիանա՞ք մեզ Հայաստանում">Will you join us in Armenia?</h2>
+          <p class="section-sub" data-en="Please respond by the 1st of March, 2027" data-hy="Խնդրում ենք պատասխանել մինչև 2027 թ. մարտի 1-ը">Please respond by the 1st of March, 2027</p>
+        </header>
+
+        <form class="rsvp-form reveal" data-reveal id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="rsvp-name" data-en="Full name" data-hy="Անուն Ազգանուն">Full name</label>
+            <input type="text" id="rsvp-name" name="name" autocomplete="name" required data-en-ph="e.g. Lusine Petrosyan" data-hy-ph="օր. Լուսինե Պետրոսյան" placeholder="e.g. Lusine Petrosyan" />
+            <p class="field-error" data-err-for="rsvp-name" data-en="Please tell us your name." data-hy="Խնդրում ենք նշել ձեր անունը։" hidden>Please tell us your name.</p>
+          </div>
+          <div class="field">
+            <label for="rsvp-email" data-en="Email" data-hy="Էլ. փոստ">Email</label>
+            <input type="email" id="rsvp-email" name="email" autocomplete="email" required placeholder="you@email.com" />
+            <p class="field-error" data-err-for="rsvp-email" data-en="Please enter a valid email." data-hy="Խնդրում ենք մուտքագրել վավեր էլ. փոստ։" hidden>Please enter a valid email.</p>
+          </div>
+          <fieldset class="field">
+            <legend data-en="Which events will you attend?" data-hy="Ո՞ր միջոցառումներին կներկայանաք">Which events will you attend?</legend>
+            <div class="check-row">
+              <label class="check"><input type="checkbox" name="events" value="welcome" /><span class="check-pill" data-en="4 July · Welcome" data-hy="4 հուլ. · Ողջույն">4 July · Welcome</span></label>
+              <label class="check"><input type="checkbox" name="events" value="ritual" /><span class="check-pill" data-en="6 July · Ritual" data-hy="6 հուլ. · Ծես">6 July · Ritual</span></label>
+              <label class="check"><input type="checkbox" name="events" value="wedding" /><span class="check-pill" data-en="7 July · Wedding" data-hy="7 հուլ. · Հարսանիք">7 July · Wedding</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend data-en="Will you attend?" data-hy="Կներկայանա՞ք">Will you attend?</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="attending" value="yes" required /><span class="choice-pill" data-en="Joyfully yes" data-hy="Ուրախությամբ՝ այո">Joyfully yes</span></label>
+              <label class="choice"><input type="radio" name="attending" value="no" /><span class="choice-pill" data-en="Sadly no" data-hy="Ցավոք՝ ոչ">Sadly no</span></label>
+            </div>
+            <p class="field-error" data-err-for="attending" data-en="Please let us know if you can join." data-hy="Խնդրում ենք նշել՝ կկարողանա՞ք միանալ։" hidden>Please let us know if you can join.</p>
+          </fieldset>
+          <div class="field">
+            <label for="rsvp-note" data-en="A note for us (optional)" data-hy="Հաղորդագրություն մեզ (ըստ ցանկության)">A note for us (optional)</label>
+            <textarea id="rsvp-note" name="note" rows="3" data-en-ph="A song request, a dietary note, or simply a hello…" data-hy-ph="Երգի ցանկություն, սննդային նշում կամ պարզապես ողջույն…" placeholder="A song request, a dietary note, or simply a hello…"></textarea>
+          </div>
+          <button class="btn btn--solid btn--block" type="submit" id="rsvpSubmit" data-en="Send our reply" data-hy="Ուղարկել պատասխանը">Send our reply</button>
+          <p class="form-success" id="rsvpSuccess" role="status" hidden
+             data-en="Thank you — your reply has been noted. We cannot wait to celebrate with you in Armenia!"
+             data-hy="Շնորհակալություն — ձեր պատասխանը գրանցվեց։ Անհամբեր սպասում ենք ձեզ Հայաստանում տոնելու։">
+            Thank you — your reply has been noted. We cannot wait to celebrate with you in Armenia!
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================== FOOTER =============================== -->
+  <footer class="site-footer">
+    <div class="floral-frame" aria-hidden="true">
+      <span class="floral floral--bl"><svg><use href="#i-peony"/></svg></span>
+      <span class="floral floral--br"><svg><use href="#i-peony"/></svg></span>
+    </div>
+    <div class="container center">
+      <svg class="footer-cross" aria-hidden="true"><use href="#i-cross"/></svg>
+      <p class="footer-tag" data-en="We are waiting for you" data-hy="Սպասում ենք ձեզ">We are waiting for you</p>
+      <p class="footer-names">Shant <span class="amp-script">&amp;</span> Siona</p>
+      <p class="footer-date" data-en="7 July 2027 · Syunik, Armenia" data-hy="7 հուլիսի 2027 · Սյունիք, Հայաստան">7 July 2027 · Syunik, Armenia</p>
+      <div class="footer-divider" aria-hidden="true"><svg class="sprig"><use href="#i-sprig"/></svg></div>
+    </div>
+  </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.3/mapbox-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7.2.0/turf.min.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
