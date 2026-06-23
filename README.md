@@ -87,6 +87,14 @@ domain in the Mapbox dashboard before going live.
 
 Without a token, the map shows a short fallback message; journey cards still work.
 
+### GitHub Pages deploy
+
+1. In [GitHub repo secrets](https://github.com/seulmessekian-ops/ShionaWedding2027/settings/secrets/actions), add **`MAPBOX_TOKEN`** with your public `pk.…` token.
+2. In repo **Settings → Pages**, set **Source** to **GitHub Actions**.
+3. Push to `main` — the workflow writes `assets/config.js` from the secret and deploys.
+
+Local sync (optional): `./scripts/sync-mapbox-config.sh` copies `.env` → `assets/config.js`.
+
 ### Stops (single source of truth)
 
 Edit the `JOURNEY_STOPS` array near the top of `assets/script.js`:
