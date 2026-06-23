@@ -95,25 +95,19 @@ Without a token, the map shows a short fallback message; journey cards still wor
 
 ### Vercel deploy
 
-The site is often hosted on **someone else’s Vercel account** (e.g. a friend). They must add the Mapbox token — you cannot do it from your account. Send them **[VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md)** and the `pk.…` token privately (text/email, not GitHub).
+**Live site:** [shiona-2027.vercel.app](https://shiona-2027.vercel.app)
 
-**Vercel owner steps (summary):**
+One-time setup for whoever owns the Vercel project:
 
-1. **Settings → Environment Variables** → add **`MAPBOX_TOKEN`** = your public `pk.…` token.
+1. **Settings → Environment Variables** → add **`MAPBOX_TOKEN`** (public `pk.…` token).
 2. Enable **Production** and **Preview**.
-3. **Redeploy** the latest deployment.
+3. **Redeploy.**
 
-No build step — `assets/config.js` is served at runtime via [`api/mapbox-config.js`](api/mapbox-config.js).
+`assets/config.js` is served at runtime via [`api/mapbox-config.js`](api/mapbox-config.js) (no build step).
 
-Local preview: `./scripts/sync-mapbox-config.sh` then `python3 -m http.server 5050`.
+In the [Mapbox dashboard](https://account.mapbox.com/access-tokens/), restrict the token to `https://shiona-2027.vercel.app/*`, `https://*.vercel.app/*`, and `http://localhost:*`.
 
-**Mapbox URL restrictions** (whoever owns the Mapbox account): allow `https://shiona-2027.vercel.app/*`, `https://*.vercel.app/*`, and `http://localhost:*`.
-
-### Troubleshooting (map blank on Vercel)
-
-1. Open `https://<vercel-domain>/assets/config.js`.
-   - `token: ""` → Vercel owner has not set `MAPBOX_TOKEN` or needs to redeploy. See [VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md).
-   - `token: "pk.…"` but map blank → add Vercel URL to Mapbox token restrictions.
+**Troubleshoot:** if the map is blank, open `/assets/config.js` — empty `token` means fix the Vercel env var and redeploy; a `pk.…` token with a blank map means fix Mapbox URL restrictions.
 
 ### Stops (single source of truth)
 
@@ -216,7 +210,7 @@ reorder them freely; the accordion behaviour and styling are automatic.
 python3 -m http.server 5050       # → http://localhost:5050
 ```
 
-**Vercel:** the project owner must set `MAPBOX_TOKEN` in Vercel — see [VERCEL_FOR_FRIEND.md](VERCEL_FOR_FRIEND.md).
+**Vercel:** [shiona-2027.vercel.app](https://shiona-2027.vercel.app) — see §3 for `MAPBOX_TOKEN` setup.
 
 ---
 

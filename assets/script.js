@@ -103,8 +103,7 @@
      route line draws on. Falls back to a static map when motion is reduced,
      Mapbox is unavailable, or no access token is set. */
 
-  // Mapbox token: set in assets/config.js (see README). Not committed to git.
-  var MAPBOX_TOKEN = '';
+  // Mapbox token: assets/config.js (local) or Vercel MAPBOX_TOKEN env (production).
 
   var JOURNEY_STOPS = [
     { id: 'yerevan', lng: 44.4939, lat: 40.1553, zoom: 9, labelEn: 'Yerevan', labelHy: 'Երևան' },
@@ -157,15 +156,14 @@
 
   function getMapToken() {
     if (window.MAPBOX_CONFIG && window.MAPBOX_CONFIG.token) return window.MAPBOX_CONFIG.token;
-    if (MAPBOX_TOKEN) return MAPBOX_TOKEN;
     var meta = document.querySelector('meta[name="mapbox-token"]');
     return meta ? meta.getAttribute('content') : '';
   }
 
   var FALLBACK_MSG = {
     'no-token': {
-      en: 'Add your Mapbox access token in assets/script.js (see README §3).',
-      hy: 'Ավելացրեք Mapbox token-ը assets/script.js-ում (տես README §3)։'
+      en: 'Mapbox token missing. Locally: run ./scripts/sync-mapbox-config.sh (see README §3). On Vercel: set MAPBOX_TOKEN in project Environment Variables and redeploy.',
+      hy: 'Mapbox token-ը բացակայում է։ Տեղային՝ ./scripts/sync-mapbox-config.sh (տես README §3)։ Vercel-ում՝ MAPBOX_TOKEN env variable և redeploy։'
     },
     'no-mapbox': {
       en: 'Mapbox could not load — check your connection or disable ad blockers for this page.',
@@ -180,8 +178,8 @@
       hy: 'Քարտեզը բեռնվել է, բայց երթուղին չի բեռնվել։ Ստուգեք, որ assets/route.geojson-ը հասանելի է server-ով։'
     },
     'auth-failed': {
-      en: 'Mapbox rejected the access token (401/403). Check the token in script.js and URL restrictions in your Mapbox dashboard (allow http://localhost:* for local preview).',
-      hy: 'Mapbox-ը մերժել է token-ը (401/403)։ Ստուգեք script.js-ի token-ը և Mapbox dashboard-ի URL restrictions-ը (localhost-ի համար թույլ տվեք http://localhost:*)։'
+      en: 'Mapbox rejected the access token (401/403). In your Mapbox dashboard, allow this site’s URL under token restrictions (e.g. https://shiona-2027.vercel.app/*).',
+      hy: 'Mapbox-ը մերժել է token-ը (401/403)։ Mapbox dashboard-ում թույլ տվեք կայքի URL-ը token restrictions-ում (օր. https://shiona-2027.vercel.app/*)։'
     },
     'webgl-failed': {
       en: 'Could not start the map — WebGL may be disabled in your browser.',
